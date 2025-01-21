@@ -1,28 +1,34 @@
 import org.junit.Test
 
 import org.junit.Assert.*
- class MainKtTest {
 
-@Test
- fun cardFeeVisa() {
+class MainKtTest {
 
-  val result = cardFee("Visa")
+    @Test
+    fun cardFeeVisa() {
+        val result = cardFee("Visa")
 
- assertEquals(0.0075, result, 0.00001)
- }
+        assertEquals(0.0075, result, 0.00001)
+    }
 
-  @Test
-  fun cardFeeMaestro() {
+    @Test
+    fun cardFeeMaster() {
+        val result = cardFee("Mastercard")
 
-   val result = cardFee("Maestro")
+        assertEquals(0.006, result, 0.00001)
+    }
 
-   assertEquals(0.006, result, 0.00001)
-  }
-  @Test
-  fun cardFeeElse() {
+    @Test
+    fun cardFeeElse() {
+        val result = cardFee("")
 
-   val result = cardFee("")
+        assertEquals(0.0, result, 0.00001)
+    }
 
-   assertEquals(0.0, result, 0.00001)
-  }
+    @Test
+    fun cardFeeVK() {
+        val result = cardFee("VK Pay")
+
+        assertEquals(0.0, result, 0.00001)
+    }
 }
