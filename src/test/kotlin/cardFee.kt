@@ -2,7 +2,7 @@ import org.junit.Test
 
 import org.junit.Assert.*
 
-class MainKtTest {
+class cardFee {
 
     @Test
     fun cardFeeVisa() {
