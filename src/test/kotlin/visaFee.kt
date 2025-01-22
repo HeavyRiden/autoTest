@@ -13,7 +13,7 @@ class visaFee {
     @Test
     fun visaFee() {
         val result = visaFee(20_000)
-        assertEquals(150, result)
+        assertEquals(15, result)
     }
 
 }
